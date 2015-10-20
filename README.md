@@ -13,4 +13,4 @@ This configuration includes:
 	 * [grunt-cli](http://gruntjs.com/)
 	 * [karma-cli](http://karma-runner.github.io/)
 	 * [jasmine](http://jasmine.github.io/)
- * (PhantomJS)[http://phantomjs.org/] v1.9.8
+ * [PhantomJS](http://phantomjs.org/) v1.9.8
