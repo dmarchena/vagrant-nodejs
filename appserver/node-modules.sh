@@ -7,3 +7,7 @@ sudo npm install -g gulp
 sudo npm install -g grunt-cli
 sudo npm install -g karma-cli
 sudo npm install -g jasmine
+
+# ESLint
+sudo npm install -g eslint
+sudo npm install -g babel-eslint
