@@ -13,13 +13,13 @@ This configuration includes:
    * 0.10
  * The following NPM packages installed globally: 
    * [babel-eslint](https://github.com/babel/babel-eslint)
-	 * [bower](http://bower.io)
+   * [bower](http://bower.io)
    * [dyson](http://webpro.github.io/dyson/)
    * [eslint](http://eslint.org/)
-	 * [express-generator](http://expressjs.com/es/starter/generator.html)
-	 * [gulp](http://gulpjs.com/)
-	 * [grunt-cli](http://gruntjs.com/)
-	 * [karma-cli](http://karma-runner.github.io/)
-	 * [jasmine](http://jasmine.github.io/)
+   * [express-generator](http://expressjs.com/es/starter/generator.html)
+   * [gulp](http://gulpjs.com/)
+   * [grunt-cli](http://gruntjs.com/)
+   * [jasmine](http://jasmine.github.io/)
+   * [karma-cli](http://karma-runner.github.io/)
  * [PhantomJS](http://phantomjs.org/) v1.9.8
  * git
