@@ -5,7 +5,13 @@ It uses Ubuntu 14.04 (Trusty Tahr) 64-bit as base box, available from [https://a
 
 This configuration includes:
 
- * Node.js and the following NPM packages installed globally: 
+ * [nvm](https://github.com/creationix/nvm)
+ * Node.js:
+   * latest (currently 5.0.0) as default
+   * 4.2
+   * 0.12
+   * 0.10
+ * The following NPM packages installed globally: 
 	 * [bower](http://bower.io)
 	 * [dyson](http://webpro.github.io/dyson/)
 	 * [express-generator](http://expressjs.com/es/starter/generator.html)
@@ -14,3 +20,4 @@ This configuration includes:
 	 * [karma-cli](http://karma-runner.github.io/)
 	 * [jasmine](http://jasmine.github.io/)
  * [PhantomJS](http://phantomjs.org/) v1.9.8
+ * git
