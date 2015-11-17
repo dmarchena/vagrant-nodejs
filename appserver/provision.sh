@@ -7,13 +7,32 @@ printf "Running Vagrant Provisioning..."
 
 # Update app-get
 apt-get update
+sudo apt-get install --yes curl
+
+printf "Installing Git..."
+sudo apt-get install --yes git
+
+printf "Installing nvm..."
+NVM_DIR=/home/vagrant/.nvm
+sudo rm -r $NVM_DIR
+git clone https://github.com/creationix/nvm.git $NVM_DIR && cd $NVM_DIR && git checkout `git describe --abbrev=0 --tags`
+#source ~/.nvm/nvm.sh
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+echo "source $NVM_DIR/nvm.sh" >> /home/vagrant/.profile
+source /home/vagrant/.profile
 
 printf "Installing Node..."
-# Setup nodejs
-curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
+# install some node versions and use latest as default
+nvm install 0.10
+nvm install 0.12
+nvm install 4
+nvm install node
+nvm use node
+nvm alias default node
 
-# Install nodejs
-sudo apt-get install --yes nodejs
+# NodeJS manual installation  
+#curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
+#sudo apt-get install --yes nodejs
 
 # To compile and install native addons from npm you may also need to install build tools:
 apt-get install --yes build-essential
@@ -21,29 +40,8 @@ apt-get install --yes build-essential
 printf "Updating NPM..."
 sudo npm install npm -g
 
-#printf "Installing nvm..."
-#
-#git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm
-#git checkout `git describe --abbrev=0 --tags`
-
-# install node with nvm, and set it to the default version
-#nvm install stable
-#nvm alias default stable
-
-printf "Installing Git..."
-sudo apt-get install --yes git
 
 printf "Installing PhantomJS..."
-
-##First of all, install a few the development packages
-#sudo apt-get install --yes build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
-#
-##Then, launch the build
-#git clone git://github.com/ariya/phantomjs.git
-#cd phantomjs
-#git checkout 2.0
-#./build.sh --jobs 1
-
 # Install this PhantomJS dependency
 sudo apt-get install --yes libfontconfig
 
